@@ -1,7 +1,8 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always",
+    "source.fixAll.eslint": "explicit",
   },
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "workbench.activityBar.orientation": "vertical",
 }
