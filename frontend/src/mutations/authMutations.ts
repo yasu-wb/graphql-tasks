@@ -7,3 +7,13 @@ mutation signIn($signInInput: SignInInput!) {
   }
 }
 `
+
+export const SIGN_UP = gql`
+mutation createUser($createUserInput: CreateUserInput!) {
+  createUser(createUserInput: $createUserInput) {
+    id
+    name
+    email
+  }
+}
+`

@@ -32,7 +32,7 @@ export default function SignIn() {
       });
       if (result.data) {
         localStorage.setItem('token', result.data.signIn.accessToken);
-        localStorage.getItem('token') && navigate('/');
+        if(localStorage.getItem('token')) navigate('/');
       }
     } catch (error: any) {
       if (error.message === 'Unauthorized') {
