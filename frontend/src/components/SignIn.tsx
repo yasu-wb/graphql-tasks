@@ -34,12 +34,11 @@ export default function SignIn() {
         localStorage.setItem('token', result.data.signIn.accessToken);
         if(localStorage.getItem('token')) navigate('/');
       }
-    } catch (error: any) {
-      if (error.message === 'Unauthorized') {
+    } catch (error: unknown) {
+      if (error instanceof Error && error.message === 'Unauthorized') {
         setFailSignIn(true);
         return;
       }
-      console.log(error.message)
       alert('予期せぬエラーが発生しました')
     }
   };
